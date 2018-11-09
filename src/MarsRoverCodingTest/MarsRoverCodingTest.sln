@@ -9,6 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{7FFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Core", "MarsRover.Core\MarsRover.Core.csproj", "{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{3C759412-FD79-4CA7-91F4-287501AA10F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8E33AC32-D657-45EE-93AC-77FB909F91C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Data", "MarsRover.Data\MarsRover.Data.csproj", "{60274A6F-9361-4A32-AE8B-E1D57457D586}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,13 +29,18 @@ Global
 		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9852077B-E49B-4B83-BAAE-C4A9B57033D8} = {7FFC07BA-06DA-4DE7-B840-D9F0123F4376}
-		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2} = {7FFC07BA-06DA-4DE7-B840-D9F0123F4376}
+		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2} = {3C759412-FD79-4CA7-91F4-287501AA10F0}
+		{60274A6F-9361-4A32-AE8B-E1D57457D586} = {8E33AC32-D657-45EE-93AC-77FB909F91C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {562598F1-50C5-4BF2-9E93-7611B5D2CDE9}
