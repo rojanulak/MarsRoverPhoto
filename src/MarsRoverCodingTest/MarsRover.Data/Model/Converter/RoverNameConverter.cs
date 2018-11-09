@@ -1,4 +1,5 @@
 ﻿using System;
+using MarsRover.Core;
 using Newtonsoft.Json;
 
 namespace MarsRover.Data.Model.Converter
@@ -7,19 +8,20 @@ namespace MarsRover.Data.Model.Converter
     {
         public override bool CanConvert(Type t) => t == typeof(RoverName) || t == typeof(RoverName?);
 
+
         public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
-            if (value == "Curiosity")
+            if (value == MarsRoverConstant.Curiosity)
             {
                 return RoverName.Curiosity;
             }
-            if (value == "Spirit")
+            if (value == MarsRoverConstant.Spirit)
             {
                 return RoverName.Spirit;
             }
-            if (value == "Opportunity")
+            if (value == MarsRoverConstant.Opportunity)
             {
                 return RoverName.Opportunity;
             }
@@ -36,17 +38,17 @@ namespace MarsRover.Data.Model.Converter
             var value = (RoverName)untypedValue;
             if (value == RoverName.Curiosity)
             {
-                serializer.Serialize(writer, "Curiosity");
+                serializer.Serialize(writer, MarsRoverConstant.Curiosity);
                 return;
             }
             if (value == RoverName.Spirit)
             {
-                serializer.Serialize(writer, "Spirit");
+                serializer.Serialize(writer, MarsRoverConstant.Spirit);
                 return;
             }
             if (value == RoverName.Opportunity)
             {
-                serializer.Serialize(writer, "Opportunity");
+                serializer.Serialize(writer, MarsRoverConstant.Opportunity);
                 return;
             }
             throw new Exception("Cannot marshal type RoverName");

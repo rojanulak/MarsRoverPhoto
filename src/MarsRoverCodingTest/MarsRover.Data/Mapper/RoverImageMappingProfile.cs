@@ -1,5 +1,4 @@
-﻿using MarsRover.Core;
-using MarsRover.Data.DTO;
+﻿using MarsRover.Data.DTO;
 using MarsRover.Data.Model;
 
 namespace MarsRover.Data.Mapper
