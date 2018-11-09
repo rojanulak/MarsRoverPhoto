@@ -1,5 +1,5 @@
 ﻿namespace MarsRover.Data.Model
 {
-    public enum Status { Active };
+    public enum Status { Active , Complete};
 }
 

@@ -15,6 +15,14 @@ namespace MarsRover.Data.Model.Converter
             {
                 return RoverName.Curiosity;
             }
+            if (value == "Spirit")
+            {
+                return RoverName.Spirit;
+            }
+            if (value == "Opportunity")
+            {
+                return RoverName.Opportunity;
+            }
             throw new Exception("Cannot unmarshal type RoverName");
         }
 
@@ -29,6 +37,16 @@ namespace MarsRover.Data.Model.Converter
             if (value == RoverName.Curiosity)
             {
                 serializer.Serialize(writer, "Curiosity");
+                return;
+            }
+            if (value == RoverName.Spirit)
+            {
+                serializer.Serialize(writer, "Spirit");
+                return;
+            }
+            if (value == RoverName.Opportunity)
+            {
+                serializer.Serialize(writer, "Opportunity");
                 return;
             }
             throw new Exception("Cannot marshal type RoverName");

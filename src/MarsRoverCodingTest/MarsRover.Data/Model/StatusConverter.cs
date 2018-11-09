@@ -16,6 +16,10 @@ namespace MarsRover.Data.Model
             {
                 return Status.Active;
             }
+            if (value == "complete")
+            {
+                return Status.Complete;
+            }
             throw new Exception("Cannot unmarshal type Status");
         }
 
@@ -30,6 +34,11 @@ namespace MarsRover.Data.Model
             if (value == Status.Active)
             {
                 serializer.Serialize(writer, "active");
+                return;
+            }
+            if (value == Status.Complete)
+            {
+                serializer.Serialize(writer, "complete");
                 return;
             }
             throw new Exception("Cannot marshal type Status");
