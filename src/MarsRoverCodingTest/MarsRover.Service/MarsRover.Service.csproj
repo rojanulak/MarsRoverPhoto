@@ -41,8 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IMarsRoverService.cs" />
+    <Compile Include="MarsRoverService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MarsRover.Core\MarsRover.Core.csproj">
+      <Project>{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2}</Project>
+      <Name>MarsRover.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarsRover.Data\MarsRover.Data.csproj">
+      <Project>{60274A6F-9361-4A32-AE8B-E1D57457D586}</Project>
+      <Name>MarsRover.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
