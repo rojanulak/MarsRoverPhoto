@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Service", "MarsRover.Service\MarsRover.Service.csproj", "{9852077B-E49B-4B83-BAAE-C4A9B57033D8}"
 EndProject
@@ -14,6 +14,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{8E33AC32-D657-45EE-93AC-77FB909F91C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Data", "MarsRover.Data\MarsRover.Data.csproj", "{60274A6F-9361-4A32-AE8B-E1D57457D586}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity", "Unity", "{5C673453-32A6-4657-B92D-9F94A2D54C02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Unity", "MarsRover.Unity\MarsRover.Unity.csproj", "{CBA53596-EA84-4774-9C5E-47CC2967D122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,10 @@ Global
 		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60274A6F-9361-4A32-AE8B-E1D57457D586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA53596-EA84-4774-9C5E-47CC2967D122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA53596-EA84-4774-9C5E-47CC2967D122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA53596-EA84-4774-9C5E-47CC2967D122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA53596-EA84-4774-9C5E-47CC2967D122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{9852077B-E49B-4B83-BAAE-C4A9B57033D8} = {7FFC07BA-06DA-4DE7-B840-D9F0123F4376}
 		{8C28A242-D9A8-4ED2-A588-3DC0A6BB97A2} = {3C759412-FD79-4CA7-91F4-287501AA10F0}
 		{60274A6F-9361-4A32-AE8B-E1D57457D586} = {8E33AC32-D657-45EE-93AC-77FB909F91C3}
+		{CBA53596-EA84-4774-9C5E-47CC2967D122} = {5C673453-32A6-4657-B92D-9F94A2D54C02}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {562598F1-50C5-4BF2-9E93-7611B5D2CDE9}
