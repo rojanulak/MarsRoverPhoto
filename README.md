@@ -4,7 +4,7 @@
 
 Rover Image consists of Console App that works like an archiver. It's backed by Rover Image Web Api that interfaces with NASA Rover Api. It also has an Angular 7 web app that can be used to see images based on Rover name and date.
 
-# Tools Used!
+# Tools Used
 
   - AutoFixture with TestStack ( for test data generation using Builder pattern)
   - Automapper ( to map objects to Dto)
