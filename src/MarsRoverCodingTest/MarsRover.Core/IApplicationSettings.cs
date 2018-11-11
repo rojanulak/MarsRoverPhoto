@@ -5,6 +5,7 @@ namespace MarsRover.Core
          string MarsRoverBaseApiUrl { get; set; }
          string MarsRoverApiKey { get; set; }
          string LocalStorageRootPath { get; set; }
+         string MarsRoverWebApi { get; set; }
 
     }
 }
