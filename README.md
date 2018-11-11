@@ -23,7 +23,7 @@ Rover Image consists of Console App that works like a archiver.Its backed by Rov
 
 Rover Image uses a follwing framework:
 
-* Angular
+* Angular 7
 * Asp .net Core for Web
 * .net 4.6.2
 
