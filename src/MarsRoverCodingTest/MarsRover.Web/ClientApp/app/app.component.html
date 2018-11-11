@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+    <div class="jumbotron">
+        <h3 class="text-center">{{title}}</h3>
+        <h4 class="text-center">{{subtitle}}</h4>
+        <hr />
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Select Rover</label>
+                    </div>
+                    <select [(ngModel)]="model.roverName" class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="Opportunity">Opportunity</option>
+                        <option value="Spirit">Spirit</option>
+                        <option value="Curiosity">Curiosity</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <ngb-datepicker #dp [(ngModel)]="model.earthDate" (navigate)="date = $event.next"></ngb-datepicker>
+            </div>
+            <div class="col-12 col-md-2">
+                <button *ngIf="!loading" type="button" (click)="search()" class="btn btn-primary"> <span class="fa fa-search"></span> Search</button>
+                <h5 *ngIf="loading">Loading...</h5>
+
+            </div>
+        </div>
+        <br/>
+        <h5 class="text-right">Total Picture found: {{ images?.length || '0' }}</h5>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3"  *ngFor="let image of images">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{image.ImageUrl}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Camera: {{image.CameraName}}</h5>
+                    <a href="{{image.ImageUrl}}" target="_blank" class="btn btn-primary">Open in new tab</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

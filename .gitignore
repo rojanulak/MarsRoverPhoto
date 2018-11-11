@@ -42,3 +42,6 @@ Repository/obj/
 Repository/bin/
 MarsRover.Core/MarsRover.Core.csproj.user
 MarsRover.Service/bin/Release
+src/MarsRoverCodingTest/MarsRover.Web/node_modules/
+src/MarsRoverCodingTest/node_modules/
+src/MarsRoverCodingTest/MarsRover.Web/wwwroot/clientapp/dist/
