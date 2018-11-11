@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Rover Image consists of Console App that works like a archiver.Its backed by Rover Image Web Api that interfaces with NASA Rover Api. It also have a Angular 7 web app that can be used to see images based on Rover name and date.
+Rover Image consists of Console App that works like an archiver. It's backed by Rover Image Web Api that interfaces with NASA Rover Api. It also has an Angular 7 web app that can be used to see images based on Rover name and date.
 
 # Tools Used!
 
@@ -21,7 +21,7 @@ Rover Image consists of Console App that works like a archiver.Its backed by Rov
 
 ### Framework
 
-Rover Image uses a follwing framework:
+Rover Image uses a following framework:
 
 * Angular 7
 * Asp .net Core for Web
@@ -45,7 +45,7 @@ Install the dependencies and devDependencies and start the server.
 Rover Image is very easy to run.
 First start your Web Api project under http://localhost:59582/, Then you can start your web app or console app or both. 
 
-you can start console app from command line usng option belwo
+you can start console app from command line usng option below, app.config has entry as to where to store the images.
 ```sh
 > cd src\MarsRoverCodingTest\MarsRoverDownloadImages.CMD\bin\Debug
 > MarsRoverDownloadImages.CMD.exe Run -f roverimagedates.txt
@@ -58,10 +58,10 @@ For Help
 
 ### Todos
 
- - Write MORE Tests (currenlty has 46 but none in UI layer)
+ - Write MORE Tests (currently has 46 but none in UI layer)
  - Add Caching layer
- - Do some cleapnup and refactoring for web project
- - add support for docker, due to windows 8 on my home machince didn't could add support for it
+ - Do some cleanup and refactoring for web project
+ - add support for docker, due to windows 8 on my home machine didn't could add support for it
  - add some security layer to web api project
  
 
