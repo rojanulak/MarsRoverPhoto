@@ -61,7 +61,7 @@ For Help
  - Write MORE Tests (currently has 46 but none in UI layer)
  - Add Caching layer
  - Do some cleanup and refactoring for web project
- - add support for docker, due to windows 8 on my home machine didn't could add support for it
+ - add support for docker, due to windows 8 on my home machine couldn't add support for it
  - add some security layer to web api project
  
 
