@@ -62,6 +62,7 @@ For Help
  - Add Caching layer
  - Do some cleapnup and refactoring for web project
  - add support for docker, due to windows 8 on my home machince didn't could add support for it
+ - add some security layer to web api project
  
 
 License
