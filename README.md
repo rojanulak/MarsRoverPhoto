@@ -63,6 +63,7 @@ For Help
  - Do some cleanup and refactoring for web project
  - add support for docker, due to windows 8 on my home machine couldn't add support for it
  - add some security layer to web api project
+ - add string literal into constant class
  
 
 License
