@@ -20,6 +20,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
@@ -275,18 +276,7 @@ public abstract class CameraActivity extends Activity
     {
       PlayingAlarm = true;
       LOGGER.i("start playing ...... ");
-      MediaPlayer mp = MediaPlayer.create(this, R.raw.alarm2);
-
-      try {
-        mp.start();
-      } catch (Exception e) {
-        e.printStackTrace();
-      }
-
-
-
-
-
+      startService(new Intent(CameraActivity.this, SoundService.class));
       LOGGER.i("playing ...... ");
     }
   }
