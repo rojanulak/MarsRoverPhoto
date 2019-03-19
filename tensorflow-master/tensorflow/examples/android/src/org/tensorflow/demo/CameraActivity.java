@@ -43,6 +43,7 @@ import android.view.Surface;
 import android.view.WindowManager;
 import android.widget.Toast;
 import java.nio.ByteBuffer;
+import java.util.Date;
 import java.util.HashSet;
 
 import org.tensorflow.demo.env.ImageUtils;
@@ -53,6 +54,7 @@ public abstract class CameraActivity extends Activity
     implements OnImageAvailableListener, Camera.PreviewCallback {
   private static final Logger LOGGER = new Logger();
 
+  private static  Date AlarmTriggerTime = new Date();
   private static final int PERMISSIONS_REQUEST = 1;
 
   private static final String PERMISSION_CAMERA = Manifest.permission.CAMERA;
@@ -160,7 +162,6 @@ public abstract class CameraActivity extends Activity
   @Override
   public void onImageAvailable(final ImageReader reader) {
     //We need wait until we have some size from onPreviewSizeChosen
-    if (!PlayingAlarm) {
     if (previewWidth == 0 || previewHeight == 0) {
       return;
     }
@@ -168,7 +169,7 @@ public abstract class CameraActivity extends Activity
       rgbBytes = new int[previewWidth * previewHeight];
     }
     try {
-      final Image image = reader.acquireLatestImage();
+      final Image image = reader.acquireNextImage();
 
       if (image == null) {
         return;
@@ -211,25 +212,30 @@ public abstract class CameraActivity extends Activity
                   isProcessingFrame = false;
                 }
               };
-        processImage();
+      processImage();
+      if (!PlayingAlarm) {
         if (IsPerson) {
           IsPerson = false;
           new android.os.Handler().postDelayed(
                   new Runnable() {
                     public void run() {
                       PlayingAlarm = false;
+                      LOGGER.d("yo yo yo yoy callback happened");
+
                     }
                   },
                   5000);
+            image.close();
           PlayAlarm();
         }
+      }
       } catch( final Exception e){
         LOGGER.e(e, "Exception!");
         Trace.endSection();
         return;
       }
       Trace.endSection();
-    }
+
   }
   @Override
   public synchronized void onStart() {
@@ -274,9 +280,22 @@ public abstract class CameraActivity extends Activity
   public void PlayAlarm(){
     if (!PlayingAlarm)
     {
-      PlayingAlarm = true;
+     PlayingAlarm = true;
       LOGGER.i("start playing ...... ");
-      startService(new Intent(CameraActivity.this, SoundService.class));
+//      startService(new Intent(CameraActivity.this, SoundService.class));
+
+      MediaPlayer mp = MediaPlayer.create(this,R.raw.alarm);
+
+      mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            PlayingAlarm = false;
+        }
+
+      });
+
+      mp.start();
       LOGGER.i("playing ...... ");
     }
   }

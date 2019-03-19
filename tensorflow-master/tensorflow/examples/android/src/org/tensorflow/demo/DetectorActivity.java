@@ -246,7 +246,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
   @Override
   protected void processImage() {
-    if (PlayingAlarm) return;
     ++timestamp;
     final long currTimestamp = timestamp;
     byte[] originalLuminance = getLuminance();
@@ -328,7 +327,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                   mappedRecognitions.add(result);
                 }
 
-              if (result.getTitle().equals("tv") && result.getConfidence() > 0.75){
+              if (result.getTitle().equals("person") && result.getConfidence() > 0.75){
                 IsPerson = true;
               }
 
