@@ -15,7 +15,7 @@
  */
 
 package org.tensorflow.demo;
-
+import java.util.Calendar;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
@@ -213,6 +213,10 @@ public abstract class CameraActivity extends Activity
                 }
               };
       processImage();
+
+      Calendar currTime = Calendar.getInstance();
+      int hour = currTime.get(Calendar.HOUR_OF_DAY);
+      if (hour >= 8 && hour < 20) {
       if (!PlayingAlarm) {
         if (IsPerson) {
           IsPerson = false;
@@ -224,10 +228,16 @@ public abstract class CameraActivity extends Activity
 
                     }
                   },
-                  5000);
+                  180000);
             image.close();
           PlayAlarm();
         }
+      }
+      }
+      else {
+
+        LOGGER.d("its night time");
+
       }
       } catch( final Exception e){
         LOGGER.e(e, "Exception!");
@@ -290,7 +300,7 @@ public abstract class CameraActivity extends Activity
 
         @Override
         public void onCompletion(MediaPlayer mp) {
-            PlayingAlarm = false;
+            //PlayingAlarm = false;
         }
 
       });

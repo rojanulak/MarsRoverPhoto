@@ -327,8 +327,10 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                   mappedRecognitions.add(result);
                 }
 
-              if (result.getTitle().equals("person") && result.getConfidence() > 0.75){
+              if (result.getTitle().equals("person") && result.getConfidence() > 0.85){
+                if (!PlayingAlarm) {
                 IsPerson = true;
+                }
               }
 
 
